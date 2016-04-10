@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{968BC11E-5191-4282-AE06-886AEB51D17D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VetExample</RootNamespace>
+    <AssemblyName>VetExample</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>VetExample.Base.Master</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>FlyMan.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\frmBaseListDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\frmBaseListDetail.Designer.cs">
+      <DependentUpon>frmBaseListDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\frmBaseSimpleEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\frmBaseSimpleEdit.Designer.cs">
+      <DependentUpon>frmBaseSimpleEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Master.cs" />
+    <Compile Include="frmAnimal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnimal.Designer.cs">
+      <DependentUpon>frmAnimal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnimalType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnimalType.Designer.cs">
+      <DependentUpon>frmAnimalType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustomers.Designer.cs">
+      <DependentUpon>frmCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTreatment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTreatment.Designer.cs">
+      <DependentUpon>frmTreatment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTreatmentType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTreatmentType.Designer.cs">
+      <DependentUpon>frmTreatmentType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Base\frmBaseListDetail.resx">
+      <DependentUpon>frmBaseListDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\frmBaseSimpleEdit.resx">
+      <DependentUpon>frmBaseSimpleEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnimal.resx">
+      <DependentUpon>frmAnimal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnimalType.resx">
+      <DependentUpon>frmAnimalType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCustomers.resx">
+      <DependentUpon>frmCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTreatment.resx">
+      <DependentUpon>frmTreatment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTreatmentType.resx">
+      <DependentUpon>frmTreatmentType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\DataSources\VetExample.Entities.Animal.datasource" />
+    <None Include="Properties\DataSources\VetExample.Entities.AnimalType.datasource" />
+    <None Include="Properties\DataSources\VetExample.Entities.Customer.datasource" />
+    <None Include="Properties\DataSources\VetExample.Entities.Treatment.datasource" />
+    <None Include="Properties\DataSources\VetExample.Entities.TreatmentType.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VetExample.BLL\VetExample.BLL.csproj">
+      <Project>{e9568da0-3f10-49d0-9b2d-6e79d2ed238a}</Project>
+      <Name>VetExample.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VetExample.Common\VetExample.Common.csproj">
+      <Project>{a31c9427-51f3-448d-8eb7-4ce564a44ef6}</Project>
+      <Name>VetExample.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VetExample.Entities\VetExample.Entities.csproj">
+      <Project>{dd24cbd6-9db5-453a-ae21-5c277d90abce}</Project>
+      <Name>VetExample.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Item-New.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Report-Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Recover-Deleted Items.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Command-Undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Command-Undo%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Command-Refresh%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrowhead-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrowhead-Down-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrowhead-Left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrowhead-Right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Caduceus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FlyMan.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
