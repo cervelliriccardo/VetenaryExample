@@ -57,5 +57,6 @@ public class Animal : BaseEntity<Animal.EntityData>
         .
     }
 ```
+##Documentation
 
 For a complete reference see the [Wiki](https://github.com/cervelliriccardo/VetenaryExample/wiki)
