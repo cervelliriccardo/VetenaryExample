@@ -9,4 +9,6 @@ I this example I would share technics used for a project at work. I had to reali
 * Entity data model implements IEditableObject to manage transaction and datasource objects (backup data before edit and then commit or    rollback the change). 
   Implements ICloneable to give clone functionality and IEquatable to give compare functionality.
   Implements IBaseEntity for have access to common fields and functionality for all the entity in the model.
-* Reflection to read commun system fields for all entitys, if present.
+* Reflection to read common system fields for the entities that extend BaseEntityData.
+* Large use of ancestor class code to maximize the code reuse
+* Windows forms extend base form to avoid rewrite of common controls and code.
