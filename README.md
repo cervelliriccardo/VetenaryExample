@@ -8,3 +8,5 @@ I this example I would share technics used for a project at work. I had to reali
 * SqlServer 2016, jSon query, stored procedure to write data into database.
 * Entity data model implements IEditableObject to manage transaction and datasource objects (backup data before edit and then commit or    rollback the change). 
   Implements ICloneable to give clone functionality and IEquatable to give compare functionality.
+  Implements IBaseEntity for have access to common fields and functionality for all the entity in the model.
+* Reflection to read commun system fields for all entitys, if present.
