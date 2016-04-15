@@ -378,7 +378,7 @@ namespace VetExample
                         Display.ShowWarning(string.Format(Properties.Resources.MustSelectToDelete, "an animal"));
                         return;
                     }
-                    if (Display.ShowMessageWithConferm(string.Format(Properties.Resources.SureToDelete, "the animal", CurrentElement.ToString()), Properties.Resources.WorningDataDeleting) == System.Windows.Forms.DialogResult.Yes)
+                    if (Display.ShowMessageWithConferm(string.Format(Properties.Resources.SureToDelete, "the animal", curel.ToString()), Properties.Resources.WorningDataDeleting) == System.Windows.Forms.DialogResult.Yes)
                     {
                         if (oViewEditing.actualStatus != state.insert)
                         {
@@ -418,7 +418,7 @@ namespace VetExample
                         Display.ShowWarning(string.Format(Properties.Resources.MustSelectToRestore, "an animal"));
                         return;
                     }
-                    if (Display.ShowMessageWithConferm(string.Format(Properties.Resources.SureToRestore, "the animal", CurrentElement.ToString()), Properties.Resources.WorningDataRestoring) == System.Windows.Forms.DialogResult.Yes)
+                    if (Display.ShowMessageWithConferm(string.Format(Properties.Resources.SureToRestore, "the animal", curel.ToString()), Properties.Resources.WorningDataRestoring) == System.Windows.Forms.DialogResult.Yes)
                     {
                         if (oViewEditing.actualStatus != state.insert)
                         {
@@ -536,7 +536,7 @@ namespace VetExample
                         Display.ShowWarning(string.Format(Properties.Resources.MustSelectToDelete, "a treatment"));
                         return;
                     }
-                    if (Display.ShowMessageWithConferm(string.Format(Properties.Resources.SureToDelete, "the treatment", CurrentElement.ToString()), Properties.Resources.WorningDataDeleting) == System.Windows.Forms.DialogResult.Yes)
+                    if (Display.ShowMessageWithConferm(string.Format(Properties.Resources.SureToDelete, "the treatment", curel.ToString()), Properties.Resources.WorningDataDeleting) == System.Windows.Forms.DialogResult.Yes)
                     {
                         if (oViewEditing.actualStatus != state.insert)
                         {
@@ -577,7 +577,7 @@ namespace VetExample
                         Display.ShowWarning(string.Format(Properties.Resources.MustSelectToRestore, "a treatment"));
                         return;
                     }
-                    if (Display.ShowMessageWithConferm(string.Format(Properties.Resources.SureToRestore, "the treatment", CurrentElement.ToString()), Properties.Resources.WorningDataRestoring) == System.Windows.Forms.DialogResult.Yes)
+                    if (Display.ShowMessageWithConferm(string.Format(Properties.Resources.SureToRestore, "the treatment", curel.ToString()), Properties.Resources.WorningDataRestoring) == System.Windows.Forms.DialogResult.Yes)
                     {
                         if (oViewEditing.actualStatus != state.insert)
                         {

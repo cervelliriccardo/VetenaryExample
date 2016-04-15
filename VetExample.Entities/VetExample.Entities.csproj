@@ -49,7 +49,6 @@
     <Compile Include="Base\BaseEntity.cs" />
     <Compile Include="Base\BaseEntityData.cs" />
     <Compile Include="Base\IBaseEntity.cs" />
-    <Compile Include="Base\MyEntityBase.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Treatment.cs" />

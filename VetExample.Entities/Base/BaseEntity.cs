@@ -17,10 +17,11 @@ namespace VetExample.Entities.Base
         delete
     }
     /// <summary>
-    /// The abstract class used as base for the classes that realize the entity model.
+    /// The abstract class used as base for the classes that realize the entity data model.
     /// It extends MyEntityBase to Notify Property Changing and Changed
     /// It implements IEditableObject to manage transaction and datasource objects
     /// It implements IBaseEntity for have access to common fields and functionality for all the entity in the model
+    /// It provides events for PropertyChanging and PropertyChanged
     /// </summary>
     /// <typeparam name="T">Is the class type of the structure for data encapsulation. 
     /// IT MAY EXTENDS OR NOT THE ABSTRACT CLASS BaseEntityData that has the common field  
@@ -31,7 +32,7 @@ namespace VetExample.Entities.Base
     /// deletedDate
     /// lastModifiedByUser
     /// If the database's table has all or some of this fields, T extends BaseEntityData otherwise it doesn't extend it</typeparam>
-    public abstract class BaseEntity<T> : MyEntityBase, IEditableObject
+    public abstract class BaseEntity<T> : IEditableObject, INotifyPropertyChanged, INotifyPropertyChanging
         , IBaseEntity where T : new()
     {
         #region LocalMembers
@@ -45,8 +46,14 @@ namespace VetExample.Entities.Base
         private T BackupData;
         //the object is in transaction?
         private bool _inTxn = false;
-        #endregion
+        [Category("ClassEvent")]
+        [Description("Notify property changed")]
+        public event PropertyChangedEventHandler PropertyChanged;
 
+        [Category("ClassEvent")]
+        [Description("Notify property changeding")]
+        public event PropertyChangingEventHandler PropertyChanging;
+        #endregion
         #region Constructor
         /// <summary>
         /// Entity constructor. The object could be created in view or insert mode. By default a new object is created in insert mode
@@ -65,7 +72,6 @@ namespace VetExample.Entities.Base
             }
         }
         #endregion
-
         #region Proprietà di sistema
         /// <summary>
         /// In Base entity calss i couldn't know if generics T extends or less BaseEntityData, 
@@ -254,7 +260,6 @@ namespace VetExample.Entities.Base
             }
         }
         #endregion
-
         #region Bind dati di sistema
         /// <summary>
         /// Populates the standard fields for record system management: Start Date validity, validity End Date, LastModifiedBy, LastModifiedDate, deletedDate
@@ -456,6 +461,22 @@ namespace VetExample.Entities.Base
             cloned.validityStartDate = this.validityStartDate;
             cloned.lastModifiedByUser = (this.lastModifiedByUser == null ? null : (User)this.lastModifiedByUser.Clone());
             cloned.CurrentState = this.CurrentState;
+        }
+        #endregion
+        #region INotifyPropertyChanged, INotifyPropertyChanging
+        protected void OnPropertyChanged([CallerMemberName] String caller = null)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(caller));
+            }
+        }
+        protected void OnPropertyChanging([CallerMemberName] String caller = null)
+        {
+            if (PropertyChanging != null)
+            {
+                PropertyChanging(this, new PropertyChangingEventArgs(caller));
+            }
         }
         #endregion
     }
