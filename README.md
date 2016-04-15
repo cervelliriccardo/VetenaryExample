@@ -6,7 +6,7 @@ I this example I would share technics used for a project at work. I had to reali
 
 ##Techniques used
 * SqlServer 2016, jSon query, stored procedure to write data into database.
-* Entity data model implements IEditableObject to manage transaction and datasource objects (backup data before edit and then commit or rollback the change). Implements ICloneable to give clone functionality and IEquatable to give compare capabilitis. It implements IBaseEntity for have access to common fields and functionality for all the entity in the model.  
+* Entity data model implements IEditableObject to manage transaction and datasource objects (backup data before edit and then commit or rollback the change). Implements ICloneable to give clone functionality and IEquatable to give compare capabilities. It implements IBaseEntity for have access to common fields and functionality for all the entity in the model.  
 * Reflection to read common system fields for the entities that extend BaseEntityData.
 * Large use of ancestor class code to maximize the code reuse
 * Windows forms extend base form to avoid rewrite of common controls and code.
