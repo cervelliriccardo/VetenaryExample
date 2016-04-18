@@ -8,6 +8,9 @@ using VetExample.Entities.Base;
 
 namespace VetExample.DAL.Base
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public enum SystemFields
     {
         validityStartDate,
@@ -20,7 +23,7 @@ namespace VetExample.DAL.Base
     public class BaseDAL
     {
         /// <summary>
-        /// Reset the entities's status of the list. Recursively resets all the objects and lists of content objects
+        /// Reset the entities's status of the list. Recursively resets all the objects and lists of context objects
         /// </summary>
         /// <param name="objectList">List of object to reset</param>
         /// <remarks></remarks>

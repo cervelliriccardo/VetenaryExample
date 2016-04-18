@@ -4,7 +4,7 @@ using System.ComponentModel;
 namespace VetExample.Entities.Base
 {
     /// <summary>
-    /// Interface for the entity model. It gives access to common fields, at entity state, at tabel prefix, at validity state.
+    /// Interface for the entity model. It gives access to common fields, at entity state, at table prefix, at validity state.
     /// Gives some functionality to ResetTransactionState, CloneSystemData, and raise event PropertyChanging and PropertyChanged  
     /// </summary>
     public interface IBaseEntity

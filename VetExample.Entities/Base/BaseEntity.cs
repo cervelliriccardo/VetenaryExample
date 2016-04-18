@@ -74,7 +74,7 @@ namespace VetExample.Entities.Base
         #endregion
         #region Proprietà di sistema
         /// <summary>
-        /// In Base entity calss i couldn't know if generics T extends or less BaseEntityData, 
+        /// In Base entity class i couldn't know if generics T extends or less BaseEntityData, 
         /// so i provided the property that uses reflection to read the value of the validityStartDate field if present, 
         /// otherwise it returns null
         /// </summary>
@@ -106,7 +106,7 @@ namespace VetExample.Entities.Base
             }
         }
         /// <summary>
-        /// In Base entity calss i couldn't know if generics T extends or less BaseEntityData, 
+        /// In Base entity class i couldn't know if generics T extends or less BaseEntityData, 
         /// so i provided the property that uses reflection to read the value of the validityEndDate field if present, 
         /// otherwise it returns null
         /// </summary>
@@ -138,7 +138,7 @@ namespace VetExample.Entities.Base
             }
         }
         /// <summary>
-        /// In Base entity calss i couldn't know if generics T extends or less BaseEntityData, 
+        /// In Base entity class i couldn't know if generics T extends or less BaseEntityData, 
         /// so i provided the property that uses reflection to read the value of the lastModifiedBy field if present, 
         /// otherwise it returns null
         /// </summary>
@@ -168,7 +168,7 @@ namespace VetExample.Entities.Base
             }
         }
         /// <summary>
-        /// In Base entity calss i couldn't know if generics T extends or less BaseEntityData, 
+        /// In Base entity class i couldn't know if generics T extends or less BaseEntityData, 
         /// so i provided the property that uses reflection to read the value of the lastModifiedDate field if present, 
         /// otherwise it returns null
         /// </summary>
@@ -197,7 +197,7 @@ namespace VetExample.Entities.Base
             }
         }
         /// <summary>
-        /// In Base entity calss i couldn't know if generics T extends or less BaseEntityData, 
+        /// In Base entity class i couldn't know if generics T extends or less BaseEntityData, 
         /// so i provided the property that uses reflection to read the value of the deletedDate field if present, 
         /// otherwise it returns null
         /// </summary>
@@ -229,7 +229,7 @@ namespace VetExample.Entities.Base
             }
         }
         /// <summary>
-        /// In Base entity calss i couldn't know if generics T extends or less BaseEntityData, 
+        /// In Base entity class i couldn't know if generics T extends or less BaseEntityData, 
         /// so i provided the property that uses reflection to read the value of the lastModifiedByUser field if present, 
         /// otherwise it returns null
         /// </summary>
